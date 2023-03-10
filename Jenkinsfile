@@ -14,7 +14,7 @@ pipeline {
 		}
 		stage ("permission") {
 			steps {
-				sh "chmod 777 /var/www/html/index.html
+				sh "chmod 777 /var/www/html/index.html"
 			}
 		}
 		
