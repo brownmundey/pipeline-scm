@@ -1,9 +1,15 @@
 pipeline {
-	agent any
+	agent {
+		label {
+			label "built-in"
+			customWorkspace "/var/www/html
+		}
+	}
 	stages {
 		stage ("stage-1") {
 			steps {
-				sh "cd /var/www"
+				sh "rm -rf *"
+				sh "cd/var/www"
 				sh "chmod -R 777 html"
 			}
 		}
