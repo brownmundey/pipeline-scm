@@ -8,14 +8,9 @@ pipeline {
 	stages {
 		stage ("stage-1") {
 			steps {
-				sh "cd /var/www"
-				sh "chmod -R 777 html"
+				sh "yum remove tree -y"
 			}
 		}
-		stage ("permission") {
-			steps {
-				sh "chmod 777 /var/www/html/index.html"
-			}
 		}
 		
 		
